@@ -1,4 +1,35 @@
 body {
+    user-select: none;
     background-color: #c2b280;
     /* background-color: #920; */
+}
+
+header {
+    text-align: center;
+    /* background-color: aliceblue; */
+    /* width: 600px;
+    height: 200px; */
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1;
+    margin: 10px;
+    padding: 15px;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1;
+    justify-items: center;
+}
+
+#rotation-number {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#user-text-label {
+    text-align: center;
+    margin: 5%;
 }

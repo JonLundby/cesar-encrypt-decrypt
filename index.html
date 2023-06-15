@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
     <title>Cesar Decoder/Encoder</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <header>
+      <h1>Cesar X cipher encoder/decoder</h1>
+    </header>
+
+    <main>
+        <fieldset>
+            <!-- rotation number -->
+            <label for="rotation-number" id="rotation-number">Rotation number</label>
+            <select name="rotation-number" style="width: 35px;">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+            
+      
+            <!-- user text -->
+            <label for="user-text" id="user-text-label">text to encode:</label>
+            <input type="text" id="user-text" style="width: 450px; height: 250px;" placeholder="type your text here..."/>
+
+        </fieldset>
+      
+    </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
