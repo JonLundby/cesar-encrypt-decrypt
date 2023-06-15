@@ -14,11 +14,21 @@ header {
 main{
     display: grid;
     grid-template-columns: 1;
+    justify-items: center;
     margin: 10px;
     padding: 15px;
 }
 
-fieldset {
+button {
+    margin: 1%;
+}
+
+/* fieldset {
+    display: grid;
+    grid-template-columns: 1;
+} */
+
+form {
     display: grid;
     grid-template-columns: 1;
     justify-items: center;
@@ -26,10 +36,11 @@ fieldset {
 
 #rotation-number {
     text-align: center;
-    margin-top: 5%;
+    /* margin-top: 2%; */
 }
 
 #user-text-label {
     text-align: center;
-    margin: 5%;
+    margin-top: 10%;
+    margin-bottom: 1%;
 }

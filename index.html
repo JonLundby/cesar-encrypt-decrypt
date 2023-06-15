@@ -13,10 +13,10 @@
     </header>
 
     <main>
-        <fieldset>
+        <!-- <fieldset> -->
             <!-- rotation number -->
-            <label for="rotation-number" id="rotation-number">Rotation number</label>
-            <select name="rotation-number" style="width: 35px;">
+            <label for="rotationNumber">Rotation number</label>
+            <select name="rotationNumber" style="width: 35px;">
               <option value="0">0</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -31,10 +31,17 @@
             
       
             <!-- user text -->
-            <label for="user-text" id="user-text-label">text to encode:</label>
-            <input type="text" id="user-text" style="width: 450px; height: 250px;" placeholder="type your text here..."/>
+            <form action="" id="user-text-form">
+              <p id="user-text-label"><label for="user-text">text to encode:</label></p>
+              <textarea name="userText" id="userText" cols="50" rows="15"></textarea>
+              <button type="submit">Encode</button>
+            </form>
 
-        </fieldset>
+        <!-- </fieldset> -->
+
+        <div id="encoded-text-container">
+          <textarea name="encodedText" id="encodedText" cols="50" rows="15"></textarea>
+        </div>
       
     </main>
 
