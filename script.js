@@ -1,6 +1,6 @@
 "use strict";
 
-const alphabetStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const alphabetStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 let alphabetArr = [];
 //let userTextStr = "the rat is in the house";
 //let userTextArr = [];
@@ -13,7 +13,7 @@ function startApp() {
   alphabetArr = alphabetStr.split("");
 
   //eventlistener for encode btn.
-  document.querySelector("#user-text-form").addEventListener("submit", convertText);
+  document.querySelector("#user-decoded-text-form").addEventListener("submit", convertText);
 
   //eventlistener for rotation number
   document.querySelector("#rotation-number").addEventListener("change", setRotationNum);
@@ -28,7 +28,7 @@ function setRotationNum(event) {
 
 function convertText(event) {
   event.preventDefault();
-
+  
   const form = event.target;
   const userTextStr = form.userText.value;
   let userTextArr = [];

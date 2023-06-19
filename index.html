@@ -13,38 +13,49 @@
     </header>
 
     <main>
-        <!-- <fieldset> -->
-            <!-- rotation number -->
-            <label for="rotation-number">Rotation number</label>
-            <select name="rotation-number" id="rotation-number" style="width: 35px;">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-            
-      
-            <!-- user text -->
-            <form action="" id="user-text-form">
-              <p id="user-text-label"><label for="user-text">text to encode:</label></p>
-              <textarea name="userText" id="userText" cols="50" rows="15"></textarea>
-              <button type="submit">Encode</button>
-            </form>
+      <!-- <fieldset> -->
+      <!-- rotation number -->
+      <label for="rotation-number">Choose rotation number</label>
+      <select name="rotation-number" id="rotation-number" style="width: 45px">
+        <option value="0">0</option>
+        <option value="1">-1</option>
+        <option value="2">-2</option>
+        <option value="3">-3</option>
+        <option value="4">-4</option>
+        <option value="5">-5</option>
+        <option value="6">-6</option>
+        <option value="7">-7</option>
+        <option value="8">-8</option>
+        <option value="9">-9</option>
+        <option value="10">-10</option>
+        <option value="11">-11</option>
+        <option value="12">-12</option>
+        <option value="13">-13</option>
+        <option value="14">-14</option>
+        <option value="15">-15</option>
+        <option value="16">-16</option>
+        <option value="17">-17</option>
+        <option value="18">-18</option>
+        <option value="19">-19</option>
+      </select>
 
-        <!-- </fieldset> -->
+      <!-- user text -->
+      <form action="" id="user-decoded-text-form">
+        <p id="user-text-label"><label for="userText">Insert text to encode:</label></p>
+        <textarea name="userText" id="userText" cols="50" rows="12"></textarea>
+        <button type="submit">Encode</button>
+      </form>
 
-        <div id="encoded-text-container">
-          <textarea name="encodedText" id="encodedText" cols="50" rows="15"></textarea>
-        </div>
-      
+      <!-- </fieldset> -->
+
+      <form action="" id="user-encoded-text-form">
+        <p id="user-text-label"><label for="encodedText">Insert text to decode:</label></p>
+        <textarea name="encodedText" id="encodedText" cols="50" rows="12"></textarea>
+        <button type="submit">Decode</button>
+      </form>
     </main>
 
+    <footer>Alphabet rotation line: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"</footer>
     <script src="script.js"></script>
   </body>
 </html>
