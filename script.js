@@ -16,9 +16,6 @@ function startApp() {
   //eventlistener for encode btn.
   document.querySelector("#user-decoded-text-form").addEventListener("submit", encodeText);
 
-  //eventlistener for decode btn.
-  document.querySelector("#user-encoded-text-form").addEventListener("submit", decodeText);
-
   //eventlistener for rotation number
   document.querySelector("#rotation-number").addEventListener("change", setRotationNum);
 
@@ -84,7 +81,7 @@ function encodeText(event) {
     
     //sending encrypted text to "#encodedText"
     encryptedText = encryptionArr.join(``);
-    //document.querySelector("#encodedText").textContent = encryptedText;
+    document.querySelector("#encodedText").textContent = encryptedText;
   }
   
   //Called if rotation is negative
@@ -118,57 +115,7 @@ function encodeText(event) {
   
   //sending encrypted text to "#encodedText"
   encryptedText = encryptionArr.join(``);
-  //document.querySelector("#encodedText").textContent = encryptedText;
+  document.querySelector("#encodedText").textContent = encryptedText;
 }
 
-}
-
-function clearEncodedTextBox() {
-  document.querySelector("#encodedText").textContent = "";
-}
-
-function insertEncodedText() {
-  document.querySelector("#encodedText").textContent = "";
-}
-
-function decodeText(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  const userEncodedTextStr = form.encodedText.value;
-  let userEncodedTextArr = [];
-  let decryptionArr = [];
-  let decryptedLetter = "";
-  let decryptedText = "";
-  userEncodedTextArr = userEncodedTextStr.split("");
-
-  //iterating over each letter of the user text array
-  for (let i = 0; i < userEncodedTextArr.length; i++) {
-    const letterUserTxt = userEncodedTextArr[i];
-    if (letterUserTxt === " " || letterUserTxt === ".") {
-      // encryptedLetter = letterUserTxt;
-      decryptionArr.push(letterUserTxt);
-    }
-
-    //iterating over each letter in the alphabet and checking if it is equal to the given iterated letter of the user text
-    for (let j = 0; j < alphabetArr.length; j++) {
-      const letterAlphabet = alphabetArr[j];
-      let calibrationNum = alphabetArr.length;
-
-      //pushing encryption and checking if rotationNum pushes letterUserTxt out of alphabetArr range
-      if (letterUserTxt === letterAlphabet && j - rotationNum < 0) {
-        calibrationNum = calibrationNum - Math.abs(j - rotationNum);
-        decryptedLetter = alphabetArr[calibrationNum];
-        decryptionArr.push(decryptedLetter);
-      } else if (letterUserTxt === letterAlphabet) {
-        decryptedLetter = alphabetArr[j - rotationNum];
-        decryptionArr.push(decryptedLetter);
-      }
-    }
-  }
-
-  //sending encrypted text to "#encodedText"
-  decryptedText = decryptionArr.join(``);
-  console.log(decryptedText);
-  document.querySelector("#userText").textContent = decryptedText;
 }
