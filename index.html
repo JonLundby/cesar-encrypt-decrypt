@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <title>Cesar Decoder/Encoder</title>
+    <title>Cesar cipher encryption/decryption</title>
   </head>
   <body>
     <header>
-      <h1>Cesar X cipher encoder/decoder</h1>
+      <h1>Cesar X cipher encryption/decryption</h1>
     </header>
 
     <main>
@@ -41,17 +41,16 @@
       </select>
 
       <!-- user text -->
-      <form action="" id="user-decoded-text-form">
-        <p id="user-text-label"><label for="userText">Insert text to encode/decode:</label></p>
+      <form action="" id="text-encrypt-decrypt">
+        <p id="user-text-label"><label for="userText">Insert text to encrypt/decrypt:</label></p>
         <textarea name="userText" id="userText" cols="50" rows="12"></textarea>
-        <button type="submit">Encode/Decode</button>
+        <button type="submit">Encrypt/Decrypt</button>
       </form>
 
-      <!-- </fieldset> -->
-
-      <form action="" id="user-encoded-text-form">
-        <p id="user-text-label"><label for="encodedText">result:</label></p>
-        <textarea name="encodedText" id="encodedText" cols="50" rows="12"></textarea>
+      <!-- encrypted/decrypted text -->
+      <form action="">
+        <p id="user-text-label"><label for="encryptedText">result:</label></p>
+        <textarea name="encryptedText" id="encryptedText" cols="50" rows="12"></textarea>
       </form>
     </main>
 
